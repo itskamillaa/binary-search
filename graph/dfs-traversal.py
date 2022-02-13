@@ -12,7 +12,7 @@ graph = {'a': ['b','c'], 'b': ['d'], 'c': ['e'], 'd': ['f'], 'e': [],'f': []}
 
 def dfsRecursive(graph, source):
     print(source)
-    for neighbor in graph(source):
+    for neighbor in graph[source]:
         dfsRecursive(graph, neighbor) 
 
 dfsRecursive(graph,'a')
