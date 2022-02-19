@@ -1,4 +1,4 @@
-edges = [['w','x'],['w','a'],['a','v'],['x','y'],['z','y'],['z','v'],['w','v']]
+edges = [['w','x'],['w','a'],['a','v'],['x','y'],['z','y'],['z','v'],['w','v'],['q','q']]
 def buildGraph(edges):
     graph = {}
     for edge in edges:
@@ -28,8 +28,8 @@ def shortestPath(graph, src, dst):
                 visited.add(neighbor)
                 queue.append((neighbor,distance+1))
     
-    return distance
+    return -1
 
 
 
-print(shortestPath(buildGraph(edges),'w','z'))
+print(shortestPath(buildGraph(edges),'w','q'))
